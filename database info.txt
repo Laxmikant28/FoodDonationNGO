@@ -1,0 +1,21 @@
+DataBase Name : food_donation
+
+2 tables:
+	food_donation_form
+	information
+
+1.columns in food_donation_form
+	1.donation_id
+	2.name
+	3.phone
+	4.address
+	5.date
+	6.quantity
+	7.food_name
+
+2.columns in information
+	1.id
+	2.name
+	3.phone
+	4.email
+	5.password

@@ -1,0 +1,116 @@
+/* static/css/chatbot.css */
+
+#chatbot-container {
+    position: fixed; /* Stay fixed on the screen */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 1000; /* Make sure it's above other elements */
+    font-family: Arial, sans-serif; /* Optional: Set a font */
+}
+
+#chatbot-icon {
+    width: 55px; /* Size of the icon */
+    height: 55px;
+    background-color: #06C167; /* Green background */
+    color: white;
+    border-radius: 50%; /* Make it round */
+    text-align: center;
+    line-height: 55px; /* Vertically center the text/icon */
+    cursor: pointer; /* Indicate it's clickable */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a shadow */
+    font-size: 28px; /* Size of the icon text */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+#chatbot-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+#chatbot-window {
+    display: none; /* Hidden by default */
+    width: 320px; /* Width of the chat window */
+    height: 450px; /* Height of the chat window */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Larger shadow */
+    position: absolute; /* Position relative to the container */
+    bottom: 70px; /* Position above the icon */
+    right: 0;
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack header, messages, input vertically */
+    overflow: hidden; /* Hide anything outside the rounded corners */
+}
+
+#chatbot-header {
+    background-color: #06C167; /* Green header */
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    flex-shrink: 0; /* Don't shrink the header */
+}
+
+#chatbot-messages {
+    flex-grow: 1; /* Take up all available space */
+    padding: 15px;
+    overflow-y: auto; /* Add scroll if messages exceed height */
+    display: flex;
+    flex-direction: column; /* Stack messages */
+}
+
+/* Style for individual messages */
+.message {
+    max-width: 85%; /* Max width of a message bubble */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px; /* Rounded corners for bubbles */
+    line-height: 1.4; /* Improve readability */
+    word-wrap: break-word; /* Break long words */
+}
+
+.user-message {
+    background-color: #e0e0e0; /* Light grey for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.bot-message {
+    background-color: #06C167; /* Green for bot messages */
+    color: white;
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+#chatbot-input-area {
+    display: flex; /* Arrange input and button side-by-side */
+    padding: 10px;
+    border-top: 1px solid #eee; /* Separator line */
+    background-color: #f9f9f9; /* Slightly different background */
+    flex-shrink: 0; /* Don't shrink the input area */
+}
+
+#chatbot-input {
+    flex-grow: 1; /* Input takes up most space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Pill shape input */
+    margin-right: 8px;
+    outline: none; /* Remove outline on focus */
+    font-size: 14px;
+}
+
+#chatbot-send {
+    padding: 10px 15px;
+    background-color: #06C167; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Pill shape button */
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease; /* Smooth hover */
+}
+
+#chatbot-send:hover {
+    background-color: #04a051; /* Darker green on hover */
+}
