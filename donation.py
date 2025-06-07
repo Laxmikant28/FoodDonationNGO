@@ -10,10 +10,9 @@ warnings.filterwarnings("ignore")
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain.prompts import PromptTemplate
-from dotenv import load_dotenv
 import json
 import os
-load_dotenv()
+
 
 with open("config.json", "r") as c:
     params = json.load(c)["params"]
@@ -99,7 +98,7 @@ llm = ChatGroq(
 )
 
 # Assuming you used HuggingFaceEmbeddings to create the vectorstore
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv('HF_TOKEN')
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 embeddings = HuggingFaceEmbeddings(
     model="all-MiniLM-L6-v2", # Ensure you have this in your .env or config
 )
