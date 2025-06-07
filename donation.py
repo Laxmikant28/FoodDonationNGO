@@ -614,7 +614,7 @@ def alldonation():
 
 
 if __name__ == "__main__":
-    donation.run(debug=True, port=2000, use_reloader=False)
+    donation.run()
     
     
     
