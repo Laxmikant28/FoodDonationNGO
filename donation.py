@@ -17,7 +17,7 @@ import os
 # with open("config.json", "r") as c:
 #     params = json.load(c)["params"]
 
-# donation = Flask(__name__)
+donation = Flask(__name__)
 # donation.secret_key = 'donate'
 
 # # def create_connection():
