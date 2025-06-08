@@ -7,10 +7,10 @@ datetime
 gunicorn
 langchain==0.3.24
 python_dotenv==1.1.0 # it is use for setup the env api's
-# langchain_community==0.3.23 # help to uploade data
-# langchain_text_splitters==0.3.8
+langchain_community==0.3.23 # help to uploade data
+langchain_text_splitters==0.3.8
 # sentence_transformers
-# langchain_huggingface==0.2.0
+langchain_huggingface==0.2.0
 faiss-cpu==1.10.0 # vectorstore
 langchain_groq==0.3.2
 psycopg2==2.9.10
